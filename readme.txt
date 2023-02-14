@@ -1,0 +1,1 @@
+The code uses localhost:3000 in a brower to capture entries
