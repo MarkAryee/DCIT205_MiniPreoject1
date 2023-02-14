@@ -54,14 +54,14 @@ app.use('/users', usersRouter);
 
 
 app.get('/add-User', (req, res) => {
-  var TextB1 = req.query.mytext;
-  var TextB2 = req.query.mytext2;
+  //var TextB1 = req.query.mytext;
+ // var TextB2 = req.query.mytext2;
 
-  res.render('indexH.pug')
+  //res.render('indexH.pug')
 
   const User = new user({
-    name: TextB1,
-    id: TextB2
+    name: 'TextB1',
+    id: 'TextB2'
   });
 
   User.save().then((result) => {
@@ -99,3 +99,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
