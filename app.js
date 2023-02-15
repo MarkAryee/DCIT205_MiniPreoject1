@@ -144,7 +144,7 @@ app.get('/add-User', (req, res) => {
   }).catch((err) => {
     console.log(err);
   })
-})
+});
 
 
 // catch 404 and forward to error handler
