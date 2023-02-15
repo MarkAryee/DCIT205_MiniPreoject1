@@ -36,15 +36,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-
-
+//const button = document.getElementById('subBut');
+var S_name;
+var S_id;
 app.get('/add-User', (req, res) => {
-    var S_name;
-    var S_id;
+    
     
   
-  res.sendFile('../html',{root: ___dirname})
+    res.sendFile(path.join(__dirname,'/html/index.html'))
   
+     
+  
+
+  
+});
+
+app.post('/add-Post', (req, res) => {
+  
+    S_name = req.body.Name;
+    S_id = req.body.ST_ID;
+
   const User = new user({
     name: S_name,
     id: S_id
@@ -55,6 +66,9 @@ app.get('/add-User', (req, res) => {
   }).catch((err) => {
     console.log(err);
   })
+  
+  //res.send(req.body);
+
 });
 
 
@@ -75,4 +89,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
