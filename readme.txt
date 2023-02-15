@@ -1,1 +1,1 @@
-The code uses localhost:3000 in a brower to capture entries
+The main .js file is app.js. At localhost:3000 A GET function sends an html response page where the user inputs name and id, then on clicking Submit, a POST function is called, which  stores the data and sends it to a mongo db account through a URI.
