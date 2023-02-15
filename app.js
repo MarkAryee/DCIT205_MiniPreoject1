@@ -9,7 +9,7 @@ const mongoose = require('mongoose')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-const readline = require(('readline') => {
+const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
 });
